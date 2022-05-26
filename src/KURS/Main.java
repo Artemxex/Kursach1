@@ -19,10 +19,9 @@ public class Main {
         list[9] = new Employee("Мишина Эстелла Георгиевна", 5, 246000);
         Employee.info(list);
         Employee.sum(list);
-        Employee. min(list);
+        Employee.min(list);
         Employee.max(list);
-        Employee. avg(list);
+        Employee.avg(list);
         Employee.name(list);
     }
-
 }

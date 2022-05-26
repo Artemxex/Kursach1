@@ -71,8 +71,13 @@ public class Employee {
                 minSalary = list[i].getEmployeeSalary();
             }
         }
-        System.out.println("Минимальная зарплата сотрудника - " + minSalary);
+        for (int i = 0; i < list.length; i++) {
+            if (list[i].getEmployeeSalary() == minSalary) {
+                System.out.println("Сотрудник с минимальной зарплатой - " + list[i]);
+            }
+        }
     }
+
 
     public static void max(Employee[] list) {
         for (int i = 0; i < list.length; i++) {
@@ -80,7 +85,12 @@ public class Employee {
                 maxSalary = list[i].getEmployeeSalary();
             }
         }
-        System.out.println("Максимальная зарплата сотрудника - " + minSalary);
+        for (int i = 0; i < list.length; i++) {
+            if (list[i].getEmployeeSalary() == maxSalary) {
+                System.out.println("Сотрудник с максимальной зарплатой - " + list[i]);
+            }
+        }
+
     }
 
     public static void avg(Employee[] list) {
