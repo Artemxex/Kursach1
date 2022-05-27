@@ -62,7 +62,7 @@ public class Employee {
     }
 
 
-    public static void min(Employee[] list) {
+    public static Employee min(Employee[] list) {
         double minSalary = 99999999;
         for (int i = 0; i < list.length; i++) {
             if (list[i].getEmployeeSalary() < minSalary) {
@@ -71,13 +71,14 @@ public class Employee {
         }
         for (int i = 0; i < list.length; i++) {
             if (list[i].getEmployeeSalary() == minSalary) {
-                System.out.println("Сотрудник с минимальной зарплатой - " + list[i]);
             }
+            return list[i];
         }
+        return null;
     }
 
 
-    public static void max(Employee[] list) {
+    public static Employee max(Employee[] list) {
         double maxSalary = 0;
         for (int i = 0; i < list.length; i++) {
             if (list[i].getEmployeeSalary() > maxSalary) {
@@ -86,10 +87,10 @@ public class Employee {
         }
         for (int i = 0; i < list.length; i++) {
             if (list[i].getEmployeeSalary() == maxSalary) {
-                System.out.println("Сотрудник с максимальной зарплатой - " + list[i]);
             }
+            return list[i];
         }
-
+        return null;
     }
 
     public static double avg(Employee[] list) {
