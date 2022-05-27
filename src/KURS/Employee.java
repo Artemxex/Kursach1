@@ -6,11 +6,6 @@ public class Employee {
     public double employeeSalary;
     public int id;
     public static int count = 0;
-    public double employeeSalarySum = 0;
-    public static double SalarySum;
-    public static double minSalary = 99999999;
-    public static double maxSalary = 0;
-    public static double average;
 
     public Employee(String employeeName, int employeeDepartment, double employeeSalary) {
         this.employeeName = employeeName;
@@ -58,14 +53,17 @@ public class Employee {
         }
     }
 
-    public static void sum(Employee[] list) {
+    public static double sum(Employee[] list) {
+        double SalarySum = 0;
         for (int i = 0; i < list.length; i++) {
             SalarySum = SalarySum + list[i].getEmployeeSalary();
         }
-        System.out.println("Сумма зарплат сотрудников - " + SalarySum);
+        return SalarySum;
     }
 
+
     public static void min(Employee[] list) {
+        double minSalary = 99999999;
         for (int i = 0; i < list.length; i++) {
             if (list[i].getEmployeeSalary() < minSalary) {
                 minSalary = list[i].getEmployeeSalary();
@@ -80,6 +78,7 @@ public class Employee {
 
 
     public static void max(Employee[] list) {
+        double maxSalary = 0;
         for (int i = 0; i < list.length; i++) {
             if (list[i].getEmployeeSalary() > maxSalary) {
                 maxSalary = list[i].getEmployeeSalary();
@@ -93,9 +92,11 @@ public class Employee {
 
     }
 
-    public static void avg(Employee[] list) {
+    public static double avg(Employee[] list) {
+        double average;
+        double SalarySum = sum(list);
         average = SalarySum / list.length;
-        System.out.println("Средняя зарплата сотрудников - " + average);
+        return average;
     }
 
     public static void name(Employee[] list) {

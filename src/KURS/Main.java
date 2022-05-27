@@ -6,6 +6,7 @@ import KURS.Employee;
 public class Main {
 
     public static void main(String[] args) {
+
         Employee[] list = new Employee[10];
         list[0] = new Employee("Сергеев Михаил Демьянович", 1, 201000);
         list[1] = new Employee("Егоров Авраам Игнатьевич", 2, 169000);
@@ -17,11 +18,15 @@ public class Main {
         list[7] = new Employee("Вишнякова Влада Якововна", 3, 123000);
         list[8] = new Employee("Зиновьев Аввакуум Иосифович", 4, 234000);
         list[9] = new Employee("Мишина Эстелла Георгиевна", 5, 246000);
+        double sums = Employee.sum(list);
         Employee.info(list);
         Employee.sum(list);
+        System.out.println("Сумма зарплат - " + sums);
         Employee.min(list);
         Employee.max(list);
+        double avgs = Employee.avg(list);
         Employee.avg(list);
+        System.out.println("Средняя зарплата сотрудников - " + avgs);
         Employee.name(list);
     }
 }
