@@ -71,8 +71,9 @@ public class Employee {
         }
         for (int i = 0; i < list.length; i++) {
             if (list[i].getEmployeeSalary() == minSalary) {
+                return list[i];
             }
-            return list[i];
+
         }
         return null;
     }
@@ -87,8 +88,9 @@ public class Employee {
         }
         for (int i = 0; i < list.length; i++) {
             if (list[i].getEmployeeSalary() == maxSalary) {
+                return list[i];
             }
-            return list[i];
+
         }
         return null;
     }
